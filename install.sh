@@ -4,6 +4,14 @@ tar -xzvf ./softwares/Django-1.5.tar.gz
 cd ./softwares/Django-1.5
 python setup.py install
 
+# install shc to compile scripts to binary files
+cd ../softwares
+tar -xzvf shc-3.8.9.tgz
+cd shc-3.8.9
+co shc-3.8.9.c shc.c
+mkdir -p /usr/local/man/man1
+make install 
+
 # install flup
 cd ../softwares
 tar -xzvf flup-1.0.2.tar.gz
