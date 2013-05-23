@@ -1,3 +1,4 @@
+#!/bin/bash
 # install Django
 tar -xzvf ./softwares/Django-1.5.tar.gz
 cd ./softwares/Django-1.5
