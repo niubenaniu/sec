@@ -15,4 +15,5 @@ Usage:
  step 1:
          execute install.sh to intall the base component
  step 2:
-         copy the config file which in conf dir to the correct dir 
+         copy the config file nginx.conf which in conf dir to the correct
+         nginx conf dir 
