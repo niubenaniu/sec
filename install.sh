@@ -5,7 +5,7 @@ cd ./softwares/Django-1.5
 python setup.py install
 
 # install shc to compile scripts to binary files
-cd ../softwares
+cd ../
 tar -xzvf shc-3.8.9.tgz
 cd shc-3.8.9
 co shc-3.8.9.c shc.c
@@ -13,13 +13,13 @@ mkdir -p /usr/local/man/man1
 make install 
 
 # install flup
-cd ../softwares
+cd ../
 tar -xzvf flup-1.0.2.tar.gz
 cd flup-1.0.2
 python setup.py install
 
 # install Nginx 
-cd ../softwares
+cd ../
 tar -xzvf pcre-8.32.tar.gz
 tar -xzvf zlib-1.2.8.tar.gz
 tar -xzvf openssl-fips-2.0.4.tar.gz
