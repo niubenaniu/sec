@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
-from test1.views import index,test
+from home.views import index,upload
+
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -7,7 +8,7 @@ from test1.views import index,test
 
 urlpatterns = patterns('',
     (r'^$',index),
-    (r'^test',test),
+    (r'^upload/',upload),
     # Examples:
     # url(r'^$', 'www.views.home', name='home'),
     # url(r'^www/', include('www.foo.urls')),
