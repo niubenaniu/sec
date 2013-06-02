@@ -1,20 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>桶桶费用管理系统</title>
-<script>
+<title>费用管理系统</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+/*
 function haha()
 {
     alert("用你妹呀！这么短时间内你能做个系统出来么？你是在逗我玩吗？");
 }
+*/
+$(document).ready(function(){
+$(".button").mouseover(function(){
+//$("p").css("background-color","red");
+//$("div").animate({left:'300px',height:'200px',width:'200px',background:'yellow'});
+var div = $("div")
+div.animate({left:'400px',height:'150px',width:'150px'});
+div.animate({top:'500px',height:'100px',width:'100px'});
+div.animate({left:'300px',height:'50px',width:'50px'});
+div.animate({top:'450px',height:'25px',width:'25px'});
+div.animate({left:'350px',height:'5px',width:'5px'},function(){
+
+alert("Text:"+div.text()+"\n"+"HTML:"+div.html());
+
+});
+});
+});
+$(".button").dbclick(function(){
+$("div").stop(false,true);
+});
 </script>
 </head>
 <body>
 <form action="">
-<p><font size="40" color="green" text-align ="center"><b>桶桶费用管理系统</b></font></p>
+<div style="background:#98bf21;top:400px;height:100px;width:100px;position:absolute;">
+<p>This is content of div</p>
+</div>
+<p><font size="40" color="green" text-align ="center"><b>费用管理系统</b></font></p>
 <p>成员：杨浩 ，李冬，李丹，李志强，牛犇</p>
 <p>作用：吃饭开销统计、报销、鬼混申请等</p>
-<input type="submit" value="点此进入系统" onclick="haha()">
+<input class="button" type="submit" value="点此进入系统"> 
 </form>
 </body>
 </html>
