@@ -21,7 +21,7 @@ div.animate({left:'300px',height:'50px',width:'50px'});
 div.animate({top:'450px',height:'25px',width:'25px'});
 div.animate({left:'350px',height:'5px',width:'5px'},function(){
 
-alert("Text:"+div.text()+"\n"+"HTML:"+div.html());
+alert("Text:"+div.text()+"\n"+"HTML:"+div.html()+"\n"+"Value:"+$("#test").val()+"\n"+"Attr:"+$("#attrtest").attr("href"));
 
 });
 });
@@ -39,6 +39,8 @@ $("div").stop(false,true);
 <p><font size="40" color="green" text-align ="center"><b>费用管理系统</b></font></p>
 <p>成员：杨浩 ，李冬，李丹，李志强，牛犇</p>
 <p>作用：吃饭开销统计、报销、鬼混申请等</p>
+<p> <a id="attrtest" href="http://www.baidu.com">attribution test</a></p>
+<p>姓名：<input type="text" id="test" value="test value"></p>
 <input class="button" type="submit" value="点此进入系统"> 
 </form>
 </body>
