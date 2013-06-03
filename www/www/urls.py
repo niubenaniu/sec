@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
-from home.views import index,upload
+import settings
+from home.views import index
 
 
 # Uncomment the next two lines to enable the admin:
@@ -8,7 +9,7 @@ from home.views import index,upload
 
 urlpatterns = patterns('',
     (r'^$',index),
-    (r'^upload/',upload),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',{ 'document_root': settings.STATIC_ROOT }),
     # Examples:
     # url(r'^$', 'www.views.home', name='home'),
     # url(r'^www/', include('www.foo.urls')),

@@ -3,6 +3,7 @@
 <head>
 <title>费用管理系统</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery.masonry.min.js"></script>
 <script type="text/javascript">
 /*
 function haha()
@@ -10,7 +11,7 @@ function haha()
     alert("用你妹呀！这么短时间内你能做个系统出来么？你是在逗我玩吗？");
 }
 */
-$(document).ready(function(){
+/*$(document).ready(function(){
 $(".button").mouseover(function(){
 //$("p").css("background-color","red");
 //$("div").animate({left:'300px',height:'200px',width:'200px',background:'yellow'});
@@ -19,17 +20,43 @@ div.animate({left:'400px',height:'150px',width:'150px'});
 div.animate({top:'500px',height:'100px',width:'100px'});
 div.animate({left:'300px',height:'50px',width:'50px'});
 div.animate({top:'450px',height:'25px',width:'25px'});
-div.animate({left:'350px',height:'5px',width:'5px'},function(){
+*/
+/*div.animate({left:'350px',height:'5px',width:'5px'},function(){
 
 alert("Text:"+div.text()+"\n"+"HTML:"+div.html()+"\n"+"Value:"+$("#test").val()+"\n"+"Attr:"+$("#attrtest").attr("href"));
-
 });
-});
-});
-$(".button").dbclick(function(){
+*/
+//});
+//});
+/*$(".button").dbclick(function(){
 $("div").stop(false,true);
 });
+*/
+$(function(){
+    $('#container').masonry({
+        itemSelector:'.item',
+        columnWidth:'220'
+    });
+});
+
 </script>
+<style type="text/css">
+.col1{ width:20px; }
+.col2{ width:120px; }
+.col3{ width:40px; }
+.col4{ width:120px; }
+.item{
+    background: none repeat scroll 0 0 #D8D5D2;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    font-weight: 300;
+    margin: 10px;
+    padding: 10px;
+}
+#container{
+    padding:5px 0;
+}
+</style>
 </head>
 <body>
 <form action="">
@@ -42,6 +69,33 @@ $("div").stop(false,true);
 <p> <a id="attrtest" href="http://www.baidu.com">attribution test</a></p>
 <p>姓名：<input type="text" id="test" value="test value"></p>
 <input class="button" type="submit" value="点此进入系统"> 
+<div id="container">
+<div class="item col1"><p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div>
+<div class="item col2"></div>
+<div class="item col3"></div>
+<div class="item col4"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+</div>
 </form>
 </body>
 </html>
