@@ -38,6 +38,25 @@ $(function(){
     });
 });
 
+function load(){
+    var xmlhttp;
+    if(window.XMLHttpRequest)
+    {
+        xmlhttp = new XMLHttpRequest();
+    }
+    else
+    {
+        xmlhttp = new ActiveXDbject("microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function(){
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+        {
+            document.getElementById("ajaxtest").innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET","/media/ajax/ajax_test.txt?"+Math.random(),true);
+    xmlhttp.send();
+}
 </script>
 <style type="text/css">
 .item{
@@ -69,7 +88,10 @@ $(function(){
 <div id="container">
 <div class="item"></div>
 <div class="item"></div>
-<div class="item"></div>
+<div class="item">
+<p id="ajaxtest">click here to change this content</p>
+<button type="button" onclick="load()">click here to test AJAX!</button>
+</div>
 <div class="item"></div>
 <div class="item"></div>
 <div class="item"></div>
